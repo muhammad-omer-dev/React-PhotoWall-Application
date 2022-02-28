@@ -1,0 +1,56 @@
+html{
+    font-size:10px;
+    font-family: sans-serif;
+}
+p{
+    font-size: 1.rem;
+    line-height: 1.5;
+
+}
+h1{
+    font-family:'Billabong';
+    text-align: center; /*to align text in center*/
+    font-size: 13rem; /*1 rem = html font size so 13 rem = 13 times html font size */
+    font-weight: 100; /*thickness of text*/
+    margin: 2rem 0;/*vertical margins of 20px horizontal margin 0px*/
+    letter-spacing: -1px;/*spacing between letters */
+    color:black; 
+}
+/* font-face to grab font from the internet */
+@font-face {
+    font-family: "Billabong"; 
+    src: url("//db.onlinewebfonts.com/t/e721330050ecfe81b4e5455e1a308181.eot"); src: url("//db.onlinewebfonts.com/t/e721330050ecfe81b4e5455e1a308181.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/e721330050ecfe81b4e5455e1a308181.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/e721330050ecfe81b4e5455e1a308181.woff") format("woff"), url("//db.onlinewebfonts.com/t/e721330050ecfe81b4e5455e1a308181.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/e721330050ecfe81b4e5455e1a308181.svg#Billabong") format("svg"); 
+}
+/* . for class selection */
+.photo-grid{
+    max-width: 1000px;
+    margin: 0 auto; /* vertical margins of div give thickness of 0 as for horizontal we set auto what auto does is increase left and right margins of a component until both are equal*/
+    display: flex; /* making the parent item display=flex makes it children elements position horizontally next to each other*/
+    flex-wrap: wrap; /*all of the flex items in the container can break into multiple lines which preserves their width*/
+}
+.figure{
+    flex-basis: calc(33.333% - 4rem); 
+    border: 1px solid #d3ded3;
+    padding: 2rem;
+    flex-grow: 1;
+    margin: 0 2rem 2rem 2rem;
+
+}
+.photo{
+    width: calc(100% + 4rem);
+    margin: -2rem 0rem 0rem -2rem;
+
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.remove-button{
+    flex-basis: 40%;
+    color: red;
+    font-size: 15px;
+    border: 2px solid #f2f2f2;
+    line-height: 2;
+    padding: 5px;
+}
