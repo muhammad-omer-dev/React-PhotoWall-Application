@@ -1,5 +1,6 @@
 import React from 'react';
 import Photo from './Photo';
+import PropTypes from 'prop-types';
 
 // if you are using only render function in class then rule is to convert to stateless function instead of class
 
@@ -12,7 +13,10 @@ function PhotoWall(props){
         </div>
     )
 }
-
+PhotoWall.propTypes={
+    posts: PropTypes.array.isRequired,      
+    onRemovePhoto: PropTypes.func.isRequired
+}
 // class componenets
 // class PhotoWall extends Component{
 //     render(){
@@ -23,5 +27,6 @@ function PhotoWall(props){
 //         )
 //     }
 // }
+
 
 export default PhotoWall
